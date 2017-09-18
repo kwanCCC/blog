@@ -151,6 +151,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tdd" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/16/tdd/">TDD开坑</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/16/tdd/" class="archive-article-date">
+  	<time datetime="2017-09-16T00:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人-这是啥-⊙o⊙-这能干哈-？"><a href="#为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人-这是啥-⊙o⊙-这能干哈-？" class="headerlink" title="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？"></a>为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？</h3><blockquote>
+<p>咳咳，正式一点，我喝口水</p>
+</blockquote>
+<p>TDD是测试驱动开发的意思，英文全称为 <strong>Test-Driven-Development</strong> ,是 <strong>敏捷</strong> 的核心实践和技术</p>
+<h3 id="Long-Long-Ago"><a href="#Long-Long-Ago" class="headerlink" title="Long Long Ago"></a>Long Long Ago</h3><p>我对面的那个小男孩说<br><img src="/assets/public/boy.png" alt="一个男孩说"></p>
+<h4 id="🙃-Too-Young-Too-Native"><a href="#🙃-Too-Young-Too-Native" class="headerlink" title="🙃 Too Young Too Native"></a>🙃 Too Young Too Native</h4><p>骨感的现实 <strong>==&gt;</strong> 狂暴的自我<br><img src="/assets/public/env.png" alt="骨感的现实"></p>
+<h3 id="开始了"><a href="#开始了" class="headerlink" title="开始了"></a>开始了</h3><h4 id="TDD能够带来什么❓"><a href="#TDD能够带来什么❓" class="headerlink" title="TDD能够带来什么❓"></a>TDD能够带来什么❓</h4><ul>
+<li>保证代码的质量</li>
+<li>保证能够随时对代码的设计进行验证</li>
+<li>保证要是有一天Someone死于产品之手，Team继续 <strong>红尘滚滚，寸草不生</strong></li>
+<li>保证重构到来的那一天能够有据可行</li>
+</ul>
+<p>总之Team的战斗力能够源源不断，Code更可稳定产出</p>
+<h3 id="闲话BB了太多，开干，-ノಠ益ಠ-ノ彡┻━┻"><a href="#闲话BB了太多，开干，-ノಠ益ಠ-ノ彡┻━┻" class="headerlink" title="闲话BB了太多，开干，(ノಠ益ಠ)ノ彡┻━┻"></a>闲话BB了太多，开干，(ノಠ益ಠ)ノ彡┻━┻</h3><h4 id="关键的导向，测试先行"><a href="#关键的导向，测试先行" class="headerlink" title="关键的导向，测试先行"></a>关键的导向，测试先行</h4><p>在实现功能代码之前，先写 <em>UT</em> ,这样就能确定到底需要什么样的代码，推荐用IDEA，友好强大，（BTW:Oracle 将Java EE 交给了Eclipse基金会，😨，不过Mars依然不好用）</p>
+<h4 id="Someone-咋开始啊？-Me-我有一亿个库，说吧，你要干谁，-╯‵□′-╯︵┻━┻"><a href="#Someone-咋开始啊？-Me-我有一亿个库，说吧，你要干谁，-╯‵□′-╯︵┻━┻" class="headerlink" title="Someone:咋开始啊？ Me:我有一亿个库，说吧，你要干谁，(╯‵□′)╯︵┻━┻"></a>Someone:咋开始啊？ Me:我有一亿个库，说吧，你要干谁，(╯‵□′)╯︵┻━┻</h4><p><strong>KeyWords: JUnit,Mockito,PowerMock,Cucumber,Spock…………..</strong></p>
+<h5 id="少年，你是否在JUnit-3的黑夜中感受到寒冷"><a href="#少年，你是否在JUnit-3的黑夜中感受到寒冷" class="headerlink" title="少年，你是否在JUnit 3的黑夜中感受到寒冷"></a>少年，你是否在JUnit 3的黑夜中感受到寒冷</h5><p>JUnit 大名鼎鼎，3代是我接触的最古老的UT Framework,他古板的要求每个测试用例必须命名为 <strong>test…</strong> 并且必须继承 <figure class="highlight plain"><figcaption><span>3，需要构建上下文的类，还需要相关的动作对应于beforeClass,before,after。 WTF!!!!💔好累</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<pre><code>. :
+\     |   /
+</code></pre><p> .          <strong>__            .<br>     —   /    \   —     .       JUnit 4 is Coming<br>  .       | ~  ~ |        .<br>     —   \</strong>O_/   —<br>…       /       \<br>              |<br>```</p>
+<p>全注解<code>@Annotation</code>应用，约定大于配置风格的JUnit 4 光芒万丈的出现了,<code>@Test,@Rule,@BeforeClass,@Before,@After</code>,更棒棒的是<code>@Runwith</code>，提供了类似于plugin的操作，也就是<code>Runner</code>这个抽象类，给很多第三方提供了可扩展的空间，感谢J4我不用再去写那么多Base类了，终于可以怎么爽怎么命名了</p>
+<h5 id="Boy，Mockito一直被追赶从未超越"><a href="#Boy，Mockito一直被追赶从未超越" class="headerlink" title="Boy，Mockito一直被追赶从未超越"></a>Boy，Mockito一直被追赶从未超越</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">TDD</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/16/tdd/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-beginning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,8 +264,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="该怎么开始呢，好尴尬"><a href="#该怎么开始呢，好尴尬" class="headerlink" title="该怎么开始呢，好尴尬"></a>该怎么开始呢，好尴尬</h2><h3 id="职业生涯两年，决定开始谢谢东西，记录开始"><a href="#职业生涯两年，决定开始谢谢东西，记录开始" class="headerlink" title="职业生涯两年，决定开始谢谢东西，记录开始"></a>职业生涯两年，决定开始谢谢东西，记录开始</h3><p>工作已经两年，算上实习这是第二家公司<a href="http://weibo.com/" target="_blank" rel="external">微博</a>,之前一直在<a href="http://oneapm.com" target="_blank" rel="external">OneAPM</a>,都是Java和Scala相关的工作。</p>
+        <h2 id="该怎么开始呢，好尴尬，😓"><a href="#该怎么开始呢，好尴尬，😓" class="headerlink" title="该怎么开始呢，好尴尬，😓"></a>该怎么开始呢，好尴尬，😓</h2><h3 id="职业生涯两年，决定开始谢谢东西，记录开始"><a href="#职业生涯两年，决定开始谢谢东西，记录开始" class="headerlink" title="职业生涯两年，决定开始谢谢东西，记录开始"></a>职业生涯两年，决定开始谢谢东西，记录开始</h3><p>工作已经两年，算上实习这是第二家公司<a href="http://weibo.com/" target="_blank" rel="external">微博</a>,之前一直在<a href="http://oneapm.com" target="_blank" rel="external">OneAPM</a>,都是Java和Scala相关的工作。</p>
 <p>尤其是在头一家公司有过很大的提高，记得刚进公司的时候我是啥也不会的小白，在那里遇到了赵老板，彪哥，晓光，鑫等一系列很靠谱的人，他们在我的 <em>搬砖之旅</em> 中给了我很大的帮助，祝好人一生BUG少</p>
+<p>我还在公司里遇见了她，你们懂得，总之在OneAPM的日子收货颇多，年轻人的好去处，Geek范足，在那里Scrum和TDD很受推崇，以至于后来我面试过很多家公司，入职之后那个代码丑的啊，😔，继续为别人的智商买单的日子又开始了，还好范冰冰发求婚微博是昨天的半夜让我睡了个好觉，(๑•̀ㅂ•́)و✧加油</p>
+<blockquote>
+<p>女朋友在考雅思，少年人在北语蹭座记</p>
+</blockquote>
 
       
 
@@ -197,6 +294,80 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/09/15/beginning/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jumptoali" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/15/jumptoali/">闪婚的结束</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/15/jumptoali/" class="archive-article-date">
+  	<time datetime="2017-09-15T05:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="终于要去阿里巴巴了，好开心，ヾ-o◕∀◕-ﾉヾ"><a href="#终于要去阿里巴巴了，好开心，ヾ-o◕∀◕-ﾉヾ" class="headerlink" title="终于要去阿里巴巴了，好开心，ヾ(o◕∀◕)ﾉヾ"></a>终于要去阿里巴巴了，好开心，ヾ(o◕∀◕)ﾉヾ</h2><p>没想到新浪的征程这么快就结束了，谢飞哥和武哥看得上，我这个人太浪，以后要是还有机会还可以继续合作，O(∩_∩)O谢谢</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/15/jumptoali/">展开全文 >></a>
         </p>
       
 
@@ -321,6 +492,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TDD</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -406,7 +581,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">树莓控&lt;br&gt;&lt;br&gt;TDD狂魔&lt;br&gt;&lt;br&gt;职业生涯救火达人&lt;br&gt;&lt;br&gt;性能挖掘者&lt;br&gt;&lt;br&gt;喜欢刀走偏锋&lt;br&gt;&lt;br&gt;年少无为，搬砖为生</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">数据拾荒者&lt;br&gt;&lt;br&gt;树莓控&lt;br&gt;&lt;br&gt;TDD狂魔&lt;br&gt;&lt;br&gt;职业生涯救火达人&lt;br&gt;&lt;br&gt;性能挖掘者&lt;br&gt;&lt;br&gt;喜欢刀走偏锋&lt;br&gt;&lt;br&gt;年少无为，搬砖为生</div>
   	  	
     	</section>
     

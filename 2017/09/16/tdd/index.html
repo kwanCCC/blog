@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://kwanccc.me">
-  <title>Archives: 2017 | KwanCCC的博客</title>
+  <title>TDD开坑 | KwanCCC的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="树莓控,TDD狂魔,职业生涯救火达人,性能挖掘者,喜欢刀走偏锋">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KwanCCC的博客">
-<meta property="og:url" content="http://kwanccc.me/archives/2017/index.html">
+  <meta name="description" content="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？ 咳咳，正式一点，我喝口水  TDD是测试驱动开发的意思，英文全称为 Test-Driven-Development ,是 敏捷 的核心实践和技术 Long Long Ago我对面的那个小男孩说 🙃 Too Young Too Native骨感的现实 ==&amp;gt; 狂暴的自我 开始了TDD能够带">
+<meta name="keywords" content="TDD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TDD开坑">
+<meta property="og:url" content="http://kwanccc.me/2017/09/16/tdd/index.html">
 <meta property="og:site_name" content="KwanCCC的博客">
-<meta property="og:description" content="树莓控,TDD狂魔,职业生涯救火达人,性能挖掘者,喜欢刀走偏锋">
+<meta property="og:description" content="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？ 咳咳，正式一点，我喝口水  TDD是测试驱动开发的意思，英文全称为 Test-Driven-Development ,是 敏捷 的核心实践和技术 Long Long Ago我对面的那个小男孩说 🙃 Too Young Too Native骨感的现实 ==&amp;gt; 狂暴的自我 开始了TDD能够带">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://kwanccc.me/assets/public/boy.png">
+<meta property="og:image" content="http://kwanccc.me/assets/public/env.png">
+<meta property="og:updated_time" content="2017-09-18T05:58:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KwanCCC的博客">
-<meta name="twitter:description" content="树莓控,TDD狂魔,职业生涯救火达人,性能挖掘者,喜欢刀走偏锋">
+<meta name="twitter:title" content="TDD开坑">
+<meta name="twitter:description" content="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？ 咳咳，正式一点，我喝口水  TDD是测试驱动开发的意思，英文全称为 Test-Driven-Development ,是 敏捷 的核心实践和技术 Long Long Ago我对面的那个小男孩说 🙃 Too Young Too Native骨感的现实 ==&amp;gt; 狂暴的自我 开始了TDD能够带">
+<meta name="twitter:image" content="http://kwanccc.me/assets/public/boy.png">
   
     <link rel="alternative" href="/atom.xml" title="KwanCCC的博客" type="application/atom+xml">
   
@@ -149,36 +154,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-tdd" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/16/tdd/" class="archive-article-date">
-  	<time datetime="2017-09-16T00:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/16/tdd/">TDD开坑</a>
+    <h1 class="article-title" itemprop="name">
+      TDD开坑
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/16/tdd/" class="archive-article-date">
+  	<time datetime="2017-09-16T00:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人-这是啥-⊙o⊙-这能干哈-？"><a href="#为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人-这是啥-⊙o⊙-这能干哈-？" class="headerlink" title="为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？"></a>为什么我嘴边总是挂着TDD，在后来的职业生涯中，经常会听到别人 这是啥 ( ⊙o⊙ )? 这能干哈 ？</h3><blockquote>
+<p>咳咳，正式一点，我喝口水</p>
+</blockquote>
+<p>TDD是测试驱动开发的意思，英文全称为 <strong>Test-Driven-Development</strong> ,是 <strong>敏捷</strong> 的核心实践和技术</p>
+<h3 id="Long-Long-Ago"><a href="#Long-Long-Ago" class="headerlink" title="Long Long Ago"></a>Long Long Ago</h3><p>我对面的那个小男孩说<br><img src="/assets/public/boy.png" alt="一个男孩说"></p>
+<h4 id="🙃-Too-Young-Too-Native"><a href="#🙃-Too-Young-Too-Native" class="headerlink" title="🙃 Too Young Too Native"></a>🙃 Too Young Too Native</h4><p>骨感的现实 <strong>==&gt;</strong> 狂暴的自我<br><img src="/assets/public/env.png" alt="骨感的现实"></p>
+<h3 id="开始了"><a href="#开始了" class="headerlink" title="开始了"></a>开始了</h3><h4 id="TDD能够带来什么❓"><a href="#TDD能够带来什么❓" class="headerlink" title="TDD能够带来什么❓"></a>TDD能够带来什么❓</h4><ul>
+<li>保证代码的质量</li>
+<li>保证能够随时对代码的设计进行验证</li>
+<li>保证要是有一天Someone死于产品之手，Team继续 <strong>红尘滚滚，寸草不生</strong></li>
+<li>保证重构到来的那一天能够有据可行</li>
+</ul>
+<p>总之Team的战斗力能够源源不断，Code更可稳定产出</p>
+<h3 id="闲话BB了太多，开干，-ノಠ益ಠ-ノ彡┻━┻"><a href="#闲话BB了太多，开干，-ノಠ益ಠ-ノ彡┻━┻" class="headerlink" title="闲话BB了太多，开干，(ノಠ益ಠ)ノ彡┻━┻"></a>闲话BB了太多，开干，(ノಠ益ಠ)ノ彡┻━┻</h3><h4 id="关键的导向，测试先行"><a href="#关键的导向，测试先行" class="headerlink" title="关键的导向，测试先行"></a>关键的导向，测试先行</h4><p>在实现功能代码之前，先写 <em>UT</em> ,这样就能确定到底需要什么样的代码，推荐用IDEA，友好强大，（BTW:Oracle 将Java EE 交给了Eclipse基金会，😨，不过Mars依然不好用）</p>
+<h4 id="Someone-咋开始啊？-Me-我有一亿个库，说吧，你要干谁，-╯‵□′-╯︵┻━┻"><a href="#Someone-咋开始啊？-Me-我有一亿个库，说吧，你要干谁，-╯‵□′-╯︵┻━┻" class="headerlink" title="Someone:咋开始啊？ Me:我有一亿个库，说吧，你要干谁，(╯‵□′)╯︵┻━┻"></a>Someone:咋开始啊？ Me:我有一亿个库，说吧，你要干谁，(╯‵□′)╯︵┻━┻</h4><p><strong>KeyWords: JUnit,Mockito,PowerMock,Cucumber,Spock…………..</strong></p>
+<h5 id="少年，你是否在JUnit-3的黑夜中感受到寒冷"><a href="#少年，你是否在JUnit-3的黑夜中感受到寒冷" class="headerlink" title="少年，你是否在JUnit 3的黑夜中感受到寒冷"></a>少年，你是否在JUnit 3的黑夜中感受到寒冷</h5><p>JUnit 大名鼎鼎，3代是我接触的最古老的UT Framework,他古板的要求每个测试用例必须命名为 <strong>test…</strong> 并且必须继承 <figure class="highlight plain"><figcaption><span>3，需要构建上下文的类，还需要相关的动作对应于beforeClass,before,after。 WTF!!!!💔好累</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<pre><code>. :
+\     |   /
+</code></pre><p> .          <strong>__            .<br>     —   /    \   —     .       JUnit 4 is Coming<br>  .       | ~  ~ |        .<br>     —   \</strong>O_/   —<br>…       /       \<br>              |<br>```</p>
+<p>全注解<code>@Annotation</code>应用，约定大于配置风格的JUnit 4 光芒万丈的出现了,<code>@Test,@Rule,@BeforeClass,@Before,@After</code>,更棒棒的是<code>@Runwith</code>，提供了类似于plugin的操作，也就是<code>Runner</code>这个抽象类，给很多第三方提供了可扩展的空间，感谢J4我不用再去写那么多Base类了，终于可以怎么爽怎么命名了</p>
+<h5 id="Boy，Mockito一直被追赶从未超越"><a href="#Boy，Mockito一直被追赶从未超越" class="headerlink" title="Boy，Mockito一直被追赶从未超越"></a>Boy，Mockito一直被追赶从未超越</h5>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>客官再来玩啊<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,95 +234,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://kwanccc.me/2017/09/16/tdd/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/beginning/" class="archive-article-date">
-  	<time datetime="2017-09-15T05:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/15/beginning/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">beginning</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/beginning/">beginning</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/jumptoali/" class="archive-article-date">
-  	<time datetime="2017-09-15T05:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/jumptoali/">闪婚的结束</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -301,8 +356,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
